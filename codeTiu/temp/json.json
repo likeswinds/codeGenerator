@@ -1,0 +1,357 @@
+[
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PONSBI",
+        "comp_col": 9
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATDITREAT1006",
+        "comp_col": 9
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATDITREAT1001",
+        "comp_col": 9
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PHEALTH1013",
+        "comp_col": 8
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PHEALTH1012",
+        "comp_col": 8
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PHEALTH1011",
+        "comp_col": 8
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PHEALTH1010",
+        "comp_col": 8
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PHEALTH1009",
+        "comp_col": 8
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PHEALTH1002",
+        "comp_col": 8
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PHEALTH1003",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PHEALTH1004",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PHEALTH1005",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PHEALTH1006",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PHEALTH1007",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PHEALTH1008",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PHEALTH1016",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PHEALTH1017",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PHEALTH1026",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PHEALTH1036",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PHEALTH1037",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PHEALTH1038",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PHEALTH1040",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PHEALTH1041",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PHEALTH1042",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATDITREAT1002",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATDITREAT1003",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATDITREAT1004",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATDITREAT1007",
+        "comp_col": 8
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATDITREAT1008",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATDITREAT1009",
+        "comp_col": 8
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATDITREAT1010",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATDITREAT1011",
+        "comp_col": 8
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATDITREAT1012",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATDITREAT1014",
+        "comp_col": 8
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATDITREAT1107",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATDITREAT1108",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATDITREAT1109",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATDITREAT1110",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATDITREAT1112",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATDITREAT1113",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATDITREAT1114",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATDITREAT1115",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATDITREAT1116",
+        "comp_col": 8
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATDITREAT1117",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATDITREAT1118",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATEMR1001",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATEMR1003",
+        "comp_col": 8
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATEMR1004",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATEMR1005",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATEMR1006",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATEMR1007",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATEMR1008",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATEMR1009",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATEMR1010",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATEMR1011",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATEMR1012",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATEMR1013",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATEMR1014",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATEMR1015",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATEMR1016",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATEMR1022",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATEMR1029",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATEMR1030",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATEMR1031",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATEMR1032",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATEMR1033",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATEMR1034",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATEMR1035",
+        "comp_col": 8
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATEMR1036",
+        "comp_col": 8
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATEMR1056",
+        "comp_col": 7
+    },
+    {
+        "table": "H_CHDSB05_01_03",
+        "p_table": "PLATEMR1057",
+        "comp_col": 8
+    }
+]

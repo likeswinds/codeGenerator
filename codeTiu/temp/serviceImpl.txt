@@ -1,0 +1,55 @@
+package <%= package %>; 
+import com.skynet.<%= table.projectName %>.entity.<%= table.name %>; 
+
+/**
+ *  
+ * Copyright (c) 2017 by [天网软件] 
+ * @Description:  <%=table.comment %>  
+ * @author:        gaowei
+ * @version:       V1.0  
+ * @Date:       <%= Date.today().toFormat("YYYY-MM-DD HH:MM:SS")%>
+ */
+ 
+@Service
+public class <%=table.name %>ServiceImpl implements <%= table.name %>Service  {
+	/**
+	 * 根据主键查询
+	 * @param primekey 平台主键
+	 * @return
+	 */
+    public <%=table.name %> findByPrimaryKey(String primekey){
+      ;
+    }
+	/**
+	 * 更新
+	 * @param <%= table.paramName %>  
+	 * @return
+	 */ 
+	public int update(<%= table.name %> <%= table.paramName %>){
+      ;
+    }
+	/**
+	 * 根据主键删除
+	 * @param primekey  
+	 * @return
+	 */ 
+	public int deleteByPrimaryKey(String primekey){
+      ;
+    }
+	/**
+	 * 插入
+	 * @param <%= table.paramName %>  
+	 * @return
+	 */ 
+	public int insert(<%= table.name %> <%= table.paramName %>){
+      ;
+    }
+	/**
+	 * 批量插入
+	 * @param <%= table.paramName %>s
+	 * @return
+	 */ 
+	public int insert(List<<%= table.paramName %>>  <%= table.paramName %>s){
+      ;
+    }
+}

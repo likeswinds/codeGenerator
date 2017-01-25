@@ -1,0 +1,30 @@
+package <%= package %>;
+import java.sql.Timestamp;
+/**
+ *  
+ * Copyright (c) 2017 by [天网软件] 
+ * @Description:   短信发送记录 
+ * @author:        gaowei
+ * @version:       V1.0  
+ * @Date:       <%= Date.today().toFormat("YYYY-MM-DD HH:MM:SS")%>
+ */
+public class  <%= table.name %> {
+    <% table.columns.forEach(function(column){ %>
+    private <%= column.type %>  <%= column.camel_name %>; // <%= column.comment %> 
+    <% }); %>
+
+    <% table.columns.forEach(function(column){ %>
+    public String get<%= column.method_name %>() {
+		return <%= column.camel_name %>;
+	} 
+
+    /**
+    * @param <%= column.camel_name %> <%= column.comment %>
+    */
+    public <%= column.type %>  set<%= column.method_name %>(<%= column.type %>  <%= column.camel_name %>) {
+		return this.<%= column.camel_name %>=<%= column.camel_name %>;
+	} 
+    <% }); %>
+
+
+}
