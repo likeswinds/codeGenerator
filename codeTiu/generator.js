@@ -1,15 +1,14 @@
 //代码生成器
-
-var fs = require("fs");
+var fs = require("fs")
 //path模块，可以生产相对和绝对路径
-var path = require("path");
-var DateUtils = require('date-utils');
-var ejs = require('ejs');
-var query = require('./query');
-var config = require('./config');
+var path = require("path")
+var DateUtils = require('date-utils')
+var ejs = require('ejs')
+var query = require('./query')
+var config = require('./config')
 var mk =require('./mkFile')
 
-let doGen = (results) => { 
+let doGen = (results) => {
     let table_comment=""
     for (let result of results) {
         // console.log(result)
@@ -20,7 +19,6 @@ let doGen = (results) => {
         generator(result.TABLE_NAME, config.package.map, "codeTiu/temp/map.txt",result.TABLE_COMMENT )
         generator(result.TABLE_NAME, config.package.serviceImpl, "codeTiu/temp/serviceImpl.txt",result.TABLE_COMMENT )
     }
-
 }
 module.exports.all = function () {
     query.tables(function (results) {
@@ -38,11 +36,11 @@ function generator(tab, package, filePath,table_comment) {
     mk(basefilePath) 
     fs.readFile(filePath, "utf-8", function (err, data) {
         if (err)
-            console.log("读取文件fail " + err);
+            console.log("读取文件fail " + err)
         else {
             // 读取成功时  
             // 输出字节数组  
-            //console.log(data);
+            //console.log(data)
             var pat_auth = ""
             query.table(tab, function (results) {
                 let columns = []
@@ -80,17 +78,17 @@ function generator(tab, package, filePath,table_comment) {
                     table: table,
                     package: basePackage
                 }
-                var str = ejs.render(data, param);              
+                var str = ejs.render(data, param)              
                 
                 var savefile=  basefilePath+'/'+table.name+classType+package.ex 
                 console.log(savefile)
                 fs.writeFileSync(savefile, str, {
                     encoding: 'utf-8'
-                });
+                })
 
             })
         }
-    });
+    })
 }
 /**
  * 获取字段映射
@@ -106,8 +104,7 @@ function getType(mysqlType) {
             break
         }
     }
-    return rtn;
-
+    return rtn
 }
 /**
  * 获取字段映射
@@ -119,7 +116,7 @@ function replace(source,reg,rep) {
         rtn+='.'+str
     }
 
-    return rtn;
+    return rtn
 
 }
 /**
@@ -131,14 +128,14 @@ function getCamel(source) {
     for (let i in arr) {
         let str = ""
         if (i == 0) {
-            str = arr[i].toLowerCase();
+            str = arr[i].toLowerCase()
         } else {
-            str = arr[i].substr(0, 1).toUpperCase();
-            str += arr[i].substr(1, arr[i].length).toLowerCase();
+            str = arr[i].substr(0, 1).toUpperCase()
+            str += arr[i].substr(1, arr[i].length).toLowerCase()
         }
-        rtn += str;
+        rtn += str
     }
-    return rtn;
+    return rtn
 }
 /**
  * 函数命名方式，首字母全大写
@@ -148,9 +145,9 @@ function getMethod(source) {
     let rtn = ""
     for (let i in arr) {
         let str = ""
-        str = arr[i].substr(0, 1).toUpperCase();
-        str += arr[i].substr(1, arr[i].length).toLowerCase();
-        rtn += str;
+        str = arr[i].substr(0, 1).toUpperCase()
+        str += arr[i].substr(1, arr[i].length).toLowerCase()
+        rtn += str
     }
-    return rtn;
+    return rtn
 }
