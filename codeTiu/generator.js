@@ -5,30 +5,37 @@ var fs = require("fs");
 var path = require("path");
 var DateUtils = require('date-utils');
 var ejs = require('ejs');
-var query = require('../codeTiu/query');
-var config = require('../codeTiu/config');
+var query = require('./query');
+var config = require('./config');
+var mk =require('./mkFile')
 
-module.exports = function () {
+let doGen = (results) => { 
+    let table_comment=""
+    for (let result of results) {
+        // console.log(result)
+        table_comment=result.TABLE_COMMENT
+        generator(result.TABLE_NAME, config.package.entity, "codeTiu/temp/entity.txt",result.TABLE_COMMENT )
+        generator(result.TABLE_NAME, config.package.service, "codeTiu/temp/service.txt",result.TABLE_COMMENT )
+        generator(result.TABLE_NAME, config.package.service, "codeTiu/temp/dao.txt",result.TABLE_COMMENT )
+        generator(result.TABLE_NAME, config.package.map, "codeTiu/temp/map.txt",result.TABLE_COMMENT )
+        generator(result.TABLE_NAME, config.package.serviceImpl, "codeTiu/temp/serviceImpl.txt",result.TABLE_COMMENT )
+    }
+
+}
+module.exports.all = function () {
     query.tables(function (results) {
-        let table_comment=""
-        for (let result of results) {
-            console.log(result)
-            table_comment=result.TABLE_COMMENT
-            generator(result.TABLE_NAME, config.package.entity, "codeTiu/temp/entity.txt",result.TABLE_COMMENT )
-            generator(result.TABLE_NAME, config.package.service, "codeTiu/temp/service.txt",result.TABLE_COMMENT )
-           generator(result.TABLE_NAME, config.package.service, "codeTiu/temp/dao.txt",result.TABLE_COMMENT )
-           generator(result.TABLE_NAME, config.package.map, "codeTiu/temp/map.txt",result.TABLE_COMMENT )
-            generator(result.TABLE_NAME, config.package.serviceImpl, "codeTiu/temp/serviceImpl.txt",result.TABLE_COMMENT )
-        }
+       doGen(results)
     })
 }
-
+module.exports.tables = function (tables) {
+    query.tables(tables,function (results) {
+        doGen(results)
+    })
+}
 function generator(tab, package, filePath,table_comment) {
-    var basefilePath = 'java/'+package.path 
-     var classType = package.name 
-    if (!fs.existsSync(basefilePath)) {
-        fs.mkdirSync(basefilePath);
-    }
+    var basefilePath = config.targetFile+'/'+package.path 
+    var classType = package.name 
+    mk(basefilePath) 
     fs.readFile(filePath, "utf-8", function (err, data) {
         if (err)
             console.log("读取文件fail " + err);
@@ -73,8 +80,7 @@ function generator(tab, package, filePath,table_comment) {
                     table: table,
                     package: basePackage
                 }
-                var str = ejs.render(data, param); 
-                
+                var str = ejs.render(data, param);              
                 
                 var savefile=  basefilePath+'/'+table.name+classType+package.ex 
                 console.log(savefile)

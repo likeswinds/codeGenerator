@@ -1,0 +1,34 @@
+{
+	"name": "generrator",
+	"version": "0.0.1",
+	"author": "likeswinds",
+	"description": "代码生成器",
+	"keywords": ["node.js", "javascript", "codeGenerrator"],
+	"repository": {
+		"type": "git",
+		"url": "https://path/to/url"
+	},
+	"license": "MIT",
+	"contributors": [{
+		"name": "likeswinds",
+		"email": "likeswinds@gmail.com"
+	}],
+	"scripts": {
+		"start": "node index.js"
+	},
+	"dependencies": {
+		"ejs": "2.5.6",
+		"mysql": "2.5.5",
+		"date-utils": "1.2.21"
+	},
+	"devDependencies": {
+		"eslint": "^3.14.1",
+		"eslint-config-standard": "^6.2.1",
+		"eslint-friendly-formatter": "^2.0.7",
+		"eslint-loader": "^1.6.1",
+		"eslint-plugin-html": "^2.0.0",
+		"eslint-plugin-promise": "^3.4.0",
+		"eslint-plugin-standard": "^2.0.1",
+		"eslint-plugin-vue": "2.0.1"
+	}
+}

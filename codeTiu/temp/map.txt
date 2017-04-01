@@ -5,7 +5,7 @@
 
 	<resultMap id="BaseResultMap" type="com.skynet.entity.<%= table.name %>">    
     <% table.columns.forEach(function(column){ %>
-		<id column="<%= column.name %>" property="<%= column.camel_name %>" jdbcType="<%= column.type %>" />  
+		<id column="<%= column.name %>" property="<%= column.camel_name %>" jdbcType="<%= column.jdbcType %>" />  
     <% }); %>
 	</resultMap>
 	<sql id="Base_Column_List">
@@ -18,12 +18,12 @@
 		<include refid="Base_Column_List" />
 		from <%= table.table_name %>  
 	</select>
-	<!-- 通过关键字查 -->
+	<!-- 通过主键查询 -->
 	<select id="findByPrimaryKey" parameterType="String" resultMap="BaseResultMap">
 		select
 		<include refid="Base_Column_List" />
 		from <%= table.table_name %> 
-		where UD = #{UD}
+		where <%= table.pk%> = #{<%= table.pk%>}
 	</select>
 	<!-- 不分页查询 -->
 	<select id="findByCondition" parameterType="java.util.Map"resultMap="BaseResultMap">
@@ -65,7 +65,7 @@
 		<trim prefix="values (" suffix=")" suffixOverrides=","> 
 			<% table.columns.forEach(function(column){ %> 
 		    <if test="<%=column.camel_name %>!=null and <%= column.camel_name %>!=''">
-				#{<%= column.camel_name %>,jdbcType=<%= column.type %>},
+				#{<%= column.camel_name %>,jdbcType=<%= column.jdbcType %>},
 				<%= column.name %>,
 		    </if>
 			<% }); %>
@@ -83,7 +83,7 @@
 		<set>
 			<% table.columns.forEach(function(column){ %> 
 			<if test="<%=column.camel_name %>!=null">
-			<%= column.name %>= #{<%=column.camel_name %>,jdbcType=<%=column.type %>},
+			<%= column.name %>= #{<%=column.camel_name %>,jdbcType=<%=column.jdbcType %>},
 			</if>
 			<% }); %>	 
 		</set>
@@ -95,7 +95,7 @@
 		values
 		<foreach collection="list" item="item" index="index" separator=",">
 			(<% table.columns.forEach(function(column){ %>
-			#{item.<%=column.camel_name %>,jdbcType=<%=column.type%>}, <% }); %>	
+			#{item.<%=column.camel_name %>,jdbcType=<%=column.jdbcType%>}, <% }); %>	
 			)
 		</foreach>
 	</insert>
