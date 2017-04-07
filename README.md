@@ -2,9 +2,9 @@
 nodejs，代码生成器
 ## 使用方法
 ### 环境准备
-npm install -g cnpm
-cnpm install
-打开vscode，启动应用程序
+npm install -g cnpm  
+cnpm install  
+打开vscode，启动应用程序  
 ### 单表生成
 var str = generator.tables('hos_dept_info')
 ### 多表生成
