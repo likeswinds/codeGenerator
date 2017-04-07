@@ -2,7 +2,7 @@
 nodejs，代码生成器
 ## 使用方法
 ### 环境准备
-npm install -g cnpm  
+npm install -g cnpm --registry=https://registry.npm.taobao.org  
 cnpm install  
 打开vscode，启动应用程序  
 ### 单表生成
