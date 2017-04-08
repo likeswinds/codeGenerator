@@ -57,6 +57,7 @@ function generator(tab, package, filePath,table_comment) {
                     column.camel_name = getCamel(result.COLUMN_NAME)
                     column.method_name = getMethod(result.COLUMN_NAME)
                     column.type = getType(result.COLUMN_TYPE)
+                    column.jdbcType = getJdbcType(result.COLUMN_TYPE)
                     columns.push(column)
                 }
                 let table = {
@@ -105,6 +106,21 @@ function getType(mysqlType) {
         }
     }
     return rtn
+/**
+ * 获取字段映射
+ */
+function getJdbcType(mysqlType) {
+    let rtn = ""
+    for (let con of config.type) {
+        if (con.mysql == mysqlType.toLowerCase()) {
+            rtn = con.jdbcType.toUpperCase()
+            break
+        } else if (mysqlType.indexOf(con.mysql.toLowerCase()) >= 0) {
+            rtn = con.jdbcType.toUpperCase()
+            break
+        }
+    }
+    return rtn;
 }
 /**
  * 获取字段映射
