@@ -10,7 +10,7 @@ import java.sql.Timestamp;
  */
 public class  <%= table.name %> {
     <% table.columns.forEach(function(column){ %>
-    private <%= column.type %>  <%= column.camel_name %>; // <%= column.comment %> 
+    private <%= column.javaType %>  <%= column.camel_name %>; // <%= column.comment %> 
     <% }); %>
 
     <% table.columns.forEach(function(column){ %>
@@ -21,7 +21,7 @@ public class  <%= table.name %> {
     /**
     * @param <%= column.camel_name %> <%= column.comment %>
     */
-    public <%= column.type %>  set<%= column.method_name %>(<%= column.type %>  <%= column.camel_name %>) {
+    public <%= column.javaType %>  set<%= column.method_name %>(<%= column.javaType %>  <%= column.camel_name %>) {
 		return this.<%= column.camel_name %>=<%= column.camel_name %>;
 	} 
     <% }); %>

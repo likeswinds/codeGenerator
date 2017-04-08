@@ -3,11 +3,12 @@ var config = {
     {mysql: 'varchar', java: 'String', jdbcType: 'varchar'},
     {mysql: 'text', java: 'String', jdbcType: 'varchar'},
     {mysql: 'int', java: 'Integer', jdbcType: 'Integer'},
-    {mysql: 'bit', java: 'Integer', jdbcType: 'bit'},
+    {mysql: 'bit', java: 'Integer', jdbcType: 'boolean'},
     {mysql: 'tinyint(1)', java: 'boolean', jdbcType: 'Integer'},
     {mysql: 'tinyint', java: 'Integer', jdbcType: 'Integer'},
-    {mysql: 'datetime', java: 'Timestamp', jdbcType: 'v'},
-    {mysql: 'date', java: 'Date', jdbcType: 'date'},
+    {mysql: 'datetime', java: 'Timestamp', jdbcType: 'java.sql.Timestamp'},
+    {mysql: 'date', java: 'Date', jdbcType: 'java.sql.Date'},
+    {mysql: 'numeric', java: 'BigDecimal', jdbcType: 'java.math.BigDecimal'},
   ],
 }
 config.database = {

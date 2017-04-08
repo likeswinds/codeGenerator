@@ -56,7 +56,7 @@ function generator(tab, package, filePath,table_comment) {
                     column.comment = result.COLUMN_COMMENT
                     column.camel_name = getCamel(result.COLUMN_NAME)
                     column.method_name = getMethod(result.COLUMN_NAME)
-                    column.type = getType(result.COLUMN_TYPE)
+                    column.javaType = getJavaType(result.COLUMN_TYPE)
                     column.jdbcType = getJdbcType(result.COLUMN_TYPE)
                     columns.push(column)
                 }
@@ -94,7 +94,7 @@ function generator(tab, package, filePath,table_comment) {
 /**
  * 获取字段映射
  */
-function getType(mysqlType) {
+function getJavaType(mysqlType) {
     let rtn = ""
     for (let con of config.type) {
         if (con.mysql == mysqlType.toLowerCase()) {
