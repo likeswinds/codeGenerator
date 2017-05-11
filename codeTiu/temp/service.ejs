@@ -1,46 +1,30 @@
 package <%= package %>; 
-import com.skynet.entity.<%= table.name %>; 
-import java.util.List; 
-import com.skynet.common.SearchParams; 
+
+import java.util.List;
+import <%=  importEntity %>;  
 
 /**
  *  
  * Copyright (c) 2017 by [天网软件] 
- * @Description:   短信发送记录 
- * @author:        gaowei
- * @version:       V1.0  
+ * @Description:  <%=table.comment %>  
+ * @author:       <%=config.author %>
+ * @version:      <%=config.version %>  
  * @Date:       <%= Date.today().toFormat("YYYY-MM-DD HH:MM:SS")%>
  */
-public interface <%= table.name %>Dao {
+public interface <%= table.name %><%= config.package.service.name%> {
 	/**
 	 * 根据主键查询
 	 * @param primekey 平台主键
 	 * @return
 	 */
 	public <%= table.name %> findByPrimaryKey(String primekey);
-    
-    
-	/**
-	 * 查询所有 
-	 * @return
-	 */
-	public List<<%= table.name %>> findAll();
-    
-	/**
-	 * 通用查询
-     * @param  <%= table.paramName %>
+  /**
+	 * 根据条件查询
+	 * @param <%= table.paramName %> 平台主键
 	 * @return
 	 */
 	public List<<%= table.name %>> findByCondition(<%= table.name %> <%= table.paramName %>);
-    
-    
-	/**
-	 * 分页查询
-     * @param  params
-	 * @return
-	 */
-	public List<<%= table.name %>> findByPage(SearchParams params);
-    
+      
 	/**
 	 * 更新
 	 * @param <%= table.paramName %>  
@@ -67,5 +51,5 @@ public interface <%= table.name %>Dao {
 	 * @param <%= table.paramName %>s
 	 * @return
 	 */ 
-	public int insertBatch(List<<%= table.paramName %>>  <%= table.paramName %>s);
+	public int insertBatch(List<<%= table.name %>>  <%= table.paramName %>s);
 }

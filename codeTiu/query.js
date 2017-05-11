@@ -1,9 +1,15 @@
 var mysql = require('mysql')
 var config = require('./config')
 var TEST_DATABASE = 'information_schema'
-var DATABASE = 'rimpdb'
+var DATABASE = config.database.database
+let dataSource = {
+  user: config.database.user,
+  password: config.database.password,
+  host: config.database.host,
+  database: 'information_schema'
+}
 //创建连接
-var client = mysql.createConnection()
+var client = mysql.createConnection(dataSource)
 
 client.connect(config.database)
 // client.query("use " + TEST_DATABASE)
@@ -15,7 +21,7 @@ module.exports.all = function(callback) {
         throw err
       }
       callback(results)
-    },
+    }
   )
 }
 

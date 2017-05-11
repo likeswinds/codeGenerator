@@ -1,22 +1,36 @@
 package <%= package %>; 
-import com.skynet.entity.<%= table.name %>; 
+import <%= importEntity %>; 
+import java.util.List; 
 
 /**
  *  
  * Copyright (c) 2017 by [天网软件] 
- * @Description:   短信发送记录 
- * @author:        gaowei
- * @version:       V1.0  
+ * @Description:  <%=table.comment %>  
+ * @author:       <%=config.author %>
+ * @version:      <%=config.version %>  
  * @Date:       <%= Date.today().toFormat("YYYY-MM-DD HH:MM:SS")%>
  */
-public interface <%= table.name %>Service {
+public interface <%= table.name %><%= config.package.dao.name%> {
 	/**
 	 * 根据主键查询
 	 * @param primekey 平台主键
 	 * @return
 	 */
 	public <%= table.name %> findByPrimaryKey(String primekey);
-    
+
+	/**
+	 * 查询所有 
+	 * @return
+	 */
+	public List<<%= table.name %>> findAll();
+
+	/**
+	 * 通用查询
+   * @param  <%= table.paramName %>
+	 * @return
+	 */
+	public List<<%= table.name %>> findByCondition(<%= table.name %> <%= table.paramName %>);
+
 	/**
 	 * 更新
 	 * @param <%= table.paramName %>  
@@ -24,24 +38,24 @@ public interface <%= table.name %>Service {
 	 */ 
 	public int update(<%= table.name %> <%= table.paramName %>);
 
-    /**
+	/**
 	 * 根据主键删除
 	 * @param primekey  
 	 * @return
 	 */ 
 	public int deleteByPrimaryKey(String primekey);
-    
-     /**
+	
+  /**
 	 * 插入
 	 * @param <%= table.paramName %>  
 	 * @return
 	 */ 
 	public int insert(<%= table.name %> <%= table.paramName %>);
 
-     /**
+  /**
 	 * 批量插入
 	 * @param <%= table.paramName %>s
 	 * @return
 	 */ 
-	public int insert(List<<%= table.paramName %>>  <%= table.paramName %>s);
+	public int insertBatch(List<<%= table.name %>>  <%= table.paramName %>s);
 }
